@@ -24,7 +24,7 @@
             });
         }
 
-        $rootScope.$watch(auth.isAuthed(), function(newValue, oldValue) {
+        $rootScope.$watch(function() { return auth.isAuthed(); }, function(newValue, oldValue) {
             if (!newValue && oldValue) {
                 $location.path('/login');
             }
