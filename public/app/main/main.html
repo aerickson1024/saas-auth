@@ -1,0 +1,11 @@
+<section class="main">
+    <h1>Auhthorization Testing</h1>
+    <div style="border: 1px solid black; margin: 10px; padding: 5px 10px;">
+        <input type="text" placeholder="email" ng-model="vm.email" /><br />
+        <input type="password" placeholder="password" ng-model="vm.password" /><br />
+        <button ng-click="vm.register(vm.email, vm.password)">Register</button>
+        <button ng-click="vm.login(vm.email, vm.password)" ng-hide="vm.isAuthed()">Login</button>
+        <button ng-click="vm.logout()" ng-show="vm.isAuthed()">Logout</button>
+    </div>
+    <h3>{{ vm.message }}</h3>
+</section>
